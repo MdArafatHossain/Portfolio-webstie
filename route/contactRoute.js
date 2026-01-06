@@ -18,16 +18,12 @@ router.post('/contact', async (req, res) =>{
     
     try {
         let smtpTransporter = nodemailer.createTransport({
-            service: 'Gmail',
             host: 'smtp.gmail.com',
-            port: 587,
-            secure: false,
+            port: 465,
+            secure: true,
             auth:{
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS
-            },
-            tls: {
-                rejectUnauthorized: false
             }
         })
         
