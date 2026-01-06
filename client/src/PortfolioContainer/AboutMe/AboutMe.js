@@ -87,7 +87,7 @@ export default function AboutMe(props) {
               <i className="fa fa-handshake-o"></i>
               Hire Me
             </button>
-            <a href = 'Hossain_MD_Resume.pdf' download= 'Hossain_MD_Resume.pdf'>
+            <a href = '/Updated_Resume_2026.pdf' download= 'MD_Hossain_Resume.pdf'>
               <button className = "btn-secondary modern-btn">
                 <i className="fa fa-download"></i>
                 Download Resume
