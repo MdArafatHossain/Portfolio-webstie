@@ -60,7 +60,7 @@ export default function Profile() {
                              <i className='fa fa-handshake-o'></i>
                              Hire Me
                              </button>
-                             <a href = '/Updated_Resume.pdf' download= 'MD_Hossain_Resume.pdf'>
+                             <a href = '/Updated_Resume_2026.pdf' download= 'MD_Hossain_Resume.pdf'>
                                  <button className = "btn-secondary modern-btn">
                                      <i className='fa fa-download'></i>
                                      Download Resume
