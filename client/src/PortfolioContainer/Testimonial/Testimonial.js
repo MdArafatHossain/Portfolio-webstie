@@ -83,7 +83,7 @@ const Testimonial = (props) => {
                                 </ul>
                             </div>
                             <div className='client-info'>
-                                <img src  = "img/testimonial/nfm.png" 
+                                <img src  = "/img/Testimonial/nfm.png" 
                                 alt = "no internet connection">
 
                                 </img>
@@ -119,7 +119,7 @@ const Testimonial = (props) => {
                                 </ul>
                             </div>
                             <div className='client-info'>
-                                <img src  = "img/testimonial/ek.png" 
+                                <img src  = "/img/Testimonial/ek.png" 
                                 alt = "no internet connection">
 
                                 </img>
@@ -155,7 +155,7 @@ const Testimonial = (props) => {
                                 </ul>
                             </div>
                             <div className='client-info'>
-                                <img src  = "img/testimonial/lady.png" 
+                                <img src  = "/img/Testimonial/lady.png" 
                                 alt = "no internet connection">
 
                                 </img>
