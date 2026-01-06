@@ -59,12 +59,20 @@ const ContactMe = (props) => {
             setName("");
             setEmail("");
             setMessage("");
+            
+            setTimeout(() => {
+              setBanner("");
+            }, 6000);
           }
         } catch (error) {
           console.log(error);
           setBanner("Failed to send message. Please try again.");
           toast.error("Failed to send message. Please try again.");
           setBool(false);
+          
+          setTimeout(() => {
+            setBanner("");
+          }, 6000);
         }
       };
 

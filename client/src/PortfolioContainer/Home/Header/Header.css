@@ -6,9 +6,11 @@
   backdrop-filter: blur(30px) saturate(150%);
   border-bottom: 1px solid rgba(102, 126, 234, 0.2);
   box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 9999;
   transition: all 0.3s ease;
 }
 .header-parent {
@@ -18,6 +20,10 @@
   height: 100%;
   width: 90%;
   max-width: 1200px;
+}
+
+.header-hamburger {
+  display: none;
 }
 
 .header-logo {
@@ -152,51 +158,52 @@
 .selected-header-option::before {
   width: 80% !important;
 }
-/*IPAD PRO RESPONSIVENESS*/
+
 @media only screen and (max-width: 1110px) {
-  header-parent {
+  .header-parent {
     width: 80%;
   }
 }
+
 @media only screen and (max-width: 970px) {
   .header-hamburger {
-    display: block;
-    color: #2d3748;
+    display: none;
   }
+  
   .header-parent {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 15px;
     position: relative;
   }
+  
+  .header-logo {
+    display: none;
+  }
+  
   .header-options {
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    left: -100%;
-    transition: all 0.8s ease-out;
-    top: 0px;
-    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    justify-content: space-around;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    z-index: 1000;
-    opacity: 0.5;
+    gap: 5px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  
+  .header-options::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .header-option {
+    font-size: 12px;
+    padding: 8px 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
   .header-option-seperator {
     margin: 0;
-  }
-  .selected-header-option {
-    color: var(--dark-orange);
-  }
-  .header-hamburger-bars {
-    font-size: 26px;
-    cursor: pointer;
-    margin: 0px 10px;
-    color: var(--white);
-  }
-  .show-hamburger-options {
-    left: 0;
-    opacity: 1;
   }
 }
