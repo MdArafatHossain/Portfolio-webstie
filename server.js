@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // API routes must come before static files
-app.use("/", contactRoute);
+app.use("/api", contactRoute);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
