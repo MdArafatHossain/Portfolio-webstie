@@ -37,13 +37,13 @@ export default function Profile() {
                             loop = {Infinity}
                             steps = {[
                                 "Front-end Web Dev 😎",
-                                1000, 
+                                5000, 
                                 "MERN stack Web Dev 📱",
-                                1000,
+                                5000,
                                 "Full-stack Web Dev💻",
-                                1000,
+                                5000,
                                 "React/React Native Dev 🌐",
-                                1000,
+                                5000,
 
                             ]}
                             />
@@ -54,15 +54,15 @@ export default function Profile() {
                          </span>
                      </div>
                      <div className='profile-options'>
-                         <button className='btn-primary-btn' 
+                         <button className='btn-primary modern-btn' 
                          onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
                          >
-                             {""}
-                             
+                             <i className='fa fa-handshake-o'></i>
                              Hire Me
                              </button>
-                             <a href = 'Hossain_MD_Resume.pdf' download= 'Hossain_MD_Resume.pdf'>
-                                 <button className = "btn highlighted-btn">
+                             <a href = '/Updated_Resume.pdf' download= 'MD_Hossain_Resume.pdf'>
+                                 <button className = "btn-secondary modern-btn">
+                                     <i className='fa fa-download'></i>
                                      Download Resume
                                  </button>
                              </a>

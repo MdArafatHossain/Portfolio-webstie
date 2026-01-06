@@ -6,8 +6,7 @@ export default class Animations {
         if(!screen_name || !screen)
         return
 
-        screen.style.opacity = "5";
-        screen.style.transform = "translateY(1px)"
+        screen.classList.add('fade-in');
     }
 
 }

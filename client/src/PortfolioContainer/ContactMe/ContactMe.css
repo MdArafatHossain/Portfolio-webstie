@@ -1,22 +1,45 @@
 .main-container{
     min-height: 100vh;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    padding: 40px 20px;
+    position: relative;
+}
+
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 70%, rgba(64, 224, 208, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(102, 126, 234, 0.3) 0%, transparent 50%);
+    pointer-events: none;
 }
 .central-form{
     max-width: 1110px;
-
-    padding: 15px;
+    padding: 40px;
     display: flex;
-    border-radius: 12px;
+    border-radius: 30px;
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    background-color: #1f2235;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(40px) brightness(105%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.1),
+        inset 0 2px 0 rgba(255, 255, 255, 0.6);
+    position: relative;
+    z-index: 2;
 }
 .central-form h2{
-    color: aliceblue;
+    color: #1a202c;
     letter-spacing: 0.2rem;
     margin-top: 20px;
-
+    font-weight: 600;
 }
 .back-form{
     max-width: 380px;
@@ -30,11 +53,10 @@
 }
 
 .img-back h4{
-    color:aliceblue;
+    color: #1a202c;
     letter-spacing: 0.3rem;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
-    opacity: 0.6;
 }
 .back-form .img-back img{
     width: 100%;
@@ -44,13 +66,19 @@
 .central-form form{
     width: auto;
     display: flex;
-    color: black;
-    padding: 15px;
+    color: #1a202c;
+    padding: 30px;
     justify-content: center;
     flex-direction: column;
     margin-top: -52px;
-    background-color: rgba(206, 219, 214, 0.87);
-    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 3px solid rgba(64, 224, 208, 0.6);
+    border-radius: 25px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 form p{
     text-align: center;
@@ -61,58 +89,84 @@ form p{
 }
 
 form label{
-    margin-bottom: 5px;
-    color: rgb(0, 0, 0);
-    letter-spacing: 0.3rem;
+    margin-bottom: 8px;
+    color: #1a202c;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
 }
 form input, textarea{
     width: 100%;
-    border: 2px solid rgba(0,0,0,0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     outline: none;
-    background-color: rgba(224, 224, 224, 0.938);
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    margin-bottom: 22px;
-    border-radius: 10px;
-    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: #1a202c;
+    box-shadow: 
+        0 5px 15px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-textarea:focus{
-    border: 2px solid rgba(7, 61, 224, 0.986);
-    background-color: white;
-}
-
-input:focus{
-    border: 2px solid rgba(7, 61, 224, 0.986);
-    background-color: white;
+textarea:focus, input:focus{
+    border: 2px solid rgba(102, 126, 234, 0.6);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 8px 25px rgba(102, 126, 234, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 form button{
-    margin-top: 15px;
-    padding: 5px;
+    margin-top: 20px;
+    padding: 12px 20px;
     outline: none;
-    width: 160px;
-    border:2px solid black;
-    font-size: 12px;
-    border-radius: 8px;
-    background-color: white;
+    width: 180px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(118, 75, 162, 0.6);
     font-size: 16px;
-    color: black;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+    border-radius: 15px;
+    color: #1a202c;
+    font-weight: 600;
     letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+form button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(118, 75, 162, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+form button:hover::before {
+    left: 100%;
 }
 form button:active{
     transform: scale(1.1);
 
 }
 form button:hover{
-    background-color: #1f2235;
-    font-weight: bold;
-    transition: ease-in-out 0.5s;
-    color: white;
-    border:2px solid var(--dark-orange);
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+        0 15px 40px rgba(118, 75, 162, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
 }
 
 .img-back{
@@ -132,12 +186,21 @@ button .load img{
 }
 
 .col i{
-    padding: 7px;
-    padding-left: 15px;
-    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    color: #1a202c;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 .col i:hover{
-    transform: scale(1.7);
+    transform: scale(1.2) translateY(-3px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(64, 224, 208, 0.2);
 }
 @media  screen and (min-width:940px) {
     .back-form{

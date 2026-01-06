@@ -11,28 +11,38 @@ export default function AboutMe(props) {
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
    const SCREEN_CONSTSANTS = {
-      description:"Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
+      description:"Almost 4 years of experience in web development as an Application Developer with expertise in the Software Development Life Cycle. Proficient in developing Single Page Applications (SPA) using React.JS and designing applications utilizing HTML5, CSS3, JavaScript, as well as backend technologies such as C# and ASP.NET Core. Experienced in Agile methodologies and committed to delivering high-quality, scalable applications.",
       highlights:{
         bullets:[
-                  "Full Stack web and mobile development",
-                  "Interactive Front End as per the design",
-                  "React and React Native",
-                  "Redux for State Management",
-                  "Building REST API",
-                  "Managing database",
+                  "Full Stack Web & Mobile Development (React.JS, ASP.NET Core)",
+                  "Agile/Scrum Master with team leadership experience",
+                  "Single Page Applications (SPA) development",
+                  "Database Management (SQL Server, MongoDB, MySQL)",
+                  "Version Control & DevOps (Git, GitHub, Jira)",
+                  "Cross-browser compliant UI/UX development",
+                  "Software Development Life Cycle (SDLC)",
+                  "Performance Optimization & Bug Tracking",
         ],
-        heading: "Here are few highlights of my experties"
+        heading: "Core Competencies & Technical Expertise"
       }
    }
 
   const renderHighlight = () => {
     return SCREEN_CONSTSANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
-        <div className="highlight-blob"></div>
+        <div className="highlight-blob">
+          <i className="fa fa-check"></i>
+        </div>
         <span>{value}</span>
       </div>
     ));
   };
+
+  const stats = [
+    { number: "4+", label: "Years Experience" },
+    { number: "20+", label: "Projects Completed" },
+    { number: "100%", label: "Client Satisfaction" }
+  ];
 
 
   return (
@@ -42,33 +52,50 @@ export default function AboutMe(props) {
   >
       <div className='about-me-parent'>
         <ScreenHeading title = {'About Me'} subHeading ={'Why Choose Me?'}/>
-        <div className='about-me-card'>
-          <div className='about-me-profile'></div>
-          <div className='about-me-details'>
-            <span className='about-me-description'>{SCREEN_CONSTSANTS.description}</span>
-            <div className='about-me-highlights'>
-              <div className='highlight-heading'>
-                <span>{SCREEN_CONSTSANTS.highlights.heading}</span>
-              </div>
-              {renderHighlight()}
-            </div>
-            <div className='about-me-options'>
-            <button className='btn-primary-btn'
-            onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
-            >
-                             {""}
-                             Hire Me
-                             </button>
-                             <a href = 'Hossain_MD_Resume.pdf' download= 'Hossain_MD_Resume.pdf'>
-                                 <button className = "btn highlighted-btn">
-                                     Download Resume
-                                 </button>
-                             </a>
+        
+        <div className='profile-section'>
+          <div className='profile-image-container'>
+            <div className='profile-image'></div>
+            <div className='stats-overlay'>
+              {stats.map((stat, index) => (
+                <div key={index} className='stat-card'>
+                  <span className='stat-number'>{stat.number}</span>
+                  <span className='stat-label'>{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
+
+        <div className='content-section'>
+          <div className='intro-card'>
+            <h2 className='intro-title'>Hello, I'm Hossain</h2>
+            <p className='intro-description'>{SCREEN_CONSTSANTS.description}</p>
+          </div>
+
+          <div className='skills-section'>
+            <h3 className='skills-title'>{SCREEN_CONSTSANTS.highlights.heading}</h3>
+            <div className='skills-grid'>
+              {renderHighlight()}
+            </div>
+          </div>
+
+          <div className='action-buttons'>
+            <button className='btn-primary modern-btn'
+              onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+            >
+              <i className="fa fa-handshake-o"></i>
+              Hire Me
+            </button>
+            <a href = 'Hossain_MD_Resume.pdf' download= 'Hossain_MD_Resume.pdf'>
+              <button className = "btn-secondary modern-btn">
+                <i className="fa fa-download"></i>
+                Download Resume
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
-        
     </div>
   )
 }

@@ -57,6 +57,9 @@ body {
   font-family: "Poppins Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f5f7fa;
+  min-height: 100vh;
+  color: #2d3748;
 }
 
 code {

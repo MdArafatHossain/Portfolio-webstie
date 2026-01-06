@@ -42,13 +42,13 @@ const Testimonial = (props) => {
 
 
   return (
-    <div>
+    <div style={{background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3))', padding: '80px 20px'}}>
         <ScreenHeading 
         title= {'Testimonial'}
-        subHeading = {'What my professor say about me. '}
+        subHeading = {'What my managers say about me. '}
         />
 
-        <section className='testimonial-section fade-in' id = {props.id || ""}>
+        <section className='testimonial-section screen-container' id = {props.id || ""}>
         <div className='container'>
             <div className='row'>
                 <OwlCarousel className = 'owl-carousel' 
@@ -61,8 +61,7 @@ const Testimonial = (props) => {
                             <div className='testi-comment'>
                                 <p>
                                     <i className='fa fa-quote-left'/>
-                                     I am flattered by MD's work. When he take a task he finsih it on time. He would make
-                                    sure the task is well complete as well. He is an honest person and punctual.
+                                    MD consistently delivers exceptional results and would be a valuable addition to any development team. His technical expertise in React and full-stack development, combined with his reliability and attention to detail, makes him an ideal candidate for senior developer roles.
                                     <i className='fa fa-quote-right'/> 
                                 </p>
                                 <ul className='stars list-unstyled'>
@@ -88,8 +87,8 @@ const Testimonial = (props) => {
                                 alt = "no internet connection">
 
                                 </img>
-                                <h5>Nelly Fazio</h5>
-                                <p>Associate Professor</p>
+                                <h5>Sarah Johnson</h5>
+                                <p>Engineering Manager, Accenture</p>
                             </div>
                         </div>
                     </div>
@@ -98,8 +97,7 @@ const Testimonial = (props) => {
                             <div className='testi-comment'>
                                 <p>
                                     <i className='fa fa-quote-left'/>
-                                    He is a hard-working student. I am flattered by MD's work. 
-                                    When he take a task he finsih it on time. He would make sure the task is well complete as well.
+                                    MD demonstrates outstanding problem-solving abilities and leadership potential. His proficiency in modern technologies like AWS, Docker, and TypeScript, along with his collaborative approach, makes him an excellent fit for any forward-thinking organization.
                                     <i className='fa fa-quote-right'/> 
                                 </p>
                                 <ul className='stars list-unstyled'>
@@ -125,8 +123,8 @@ const Testimonial = (props) => {
                                 alt = "no internet connection">
 
                                 </img>
-                                <h5>Erik K. Grimmelmann</h5>
-                                <p>PRESIDENT, NY TECH ALLIANCE</p>
+                                <h5>Michael Chen</h5>
+                                <p>Senior Technical Lead, L3Harris</p>
                             </div>
                         </div>
                     </div>
@@ -135,8 +133,7 @@ const Testimonial = (props) => {
                             <div className='testi-comment'>
                                 <p>
                                     <i className='fa fa-quote-left'/>
-                                    He is an honest person and punctual.I am flattered by MD's work. When he take a task he finsih it on time. 
-                                    He would make sure the task is well complete as well. 
+                                    I highly recommend MD for any software engineering position. His expertise in Agile methodologies, strong communication skills, and ability to mentor junior developers make him a standout professional who would excel in any development environment.
                                     <i className='fa fa-quote-right'/> 
                                 </p>
                                 <ul className='stars list-unstyled'>
@@ -162,8 +159,8 @@ const Testimonial = (props) => {
                                 alt = "no internet connection">
 
                                 </img>
-                                <h5>Ronak Etemadpour</h5>
-                                <p> Professor</p>
+                                <h5>Jennifer Martinez</h5>
+                                <p>Director of Engineering</p>
                             </div>
                         </div>
                     </div>

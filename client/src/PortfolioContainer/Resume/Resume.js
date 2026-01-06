@@ -53,35 +53,42 @@ const Resume = (props) => {
 
   //here is the skills
   const programmingSkillsDetails = [
-              {skill: "Python", ratingPercentage: 85}, 
-              {skill: "React Js", ratingPercentage: 89}, 
-              {skill: "JavaScript", ratingPercentage: 80}, 
-              {skill: "Node Js", ratingPercentage: 85}, 
-              {skill: "Express Js", ratingPercentage: 80}, 
-              {skill: "HTML", ratingPercentage: 95}, 
-              {skill: "CSS", ratingPercentage: 85}, 
-              {skill: "Mongo Db", ratingPercentage: 70}, 
-              {skill: "MySQL", ratingPercentage: 85}, 
+              {skill: "React.js", ratingPercentage: 90}, 
+              {skill: "JavaScript", ratingPercentage: 85}, 
+              {skill: "TypeScript", ratingPercentage: 80}, 
+              {skill: "Node.js", ratingPercentage: 85}, 
+              {skill: "Python", ratingPercentage: 80}, 
+              {skill: "AWS", ratingPercentage: 75}, 
+              {skill: "Docker", ratingPercentage: 70}, 
+              {skill: "MongoDB", ratingPercentage: 75}, 
+              {skill: "PostgreSQL", ratingPercentage: 80}, 
+              {skill: "Git/GitHub", ratingPercentage: 90}, 
           ];
 
   const projectsDetails = [
     {
+        title:"Kindwave - Humanitarian Donation Platform",
+        duration:{fromDate: "2024", toDate: "2024"},
+        description: "Built full-stack web application using FastAPI, React/TypeScript, PostgreSQL, and Stripe integration with JWT authentication and real-time crisis feed from ReliefWeb API.",
+        subHeading: "Technologies Used: FastAPI, React/TypeScript, PostgreSQL, AWS",
+    },
+    {
+        title:"DevOps Event Ingestion & Analytics Platform",
+        duration:{fromDate: "2025", toDate: "2025"}, 
+        description: "Designed a centralized Kafka-based DevOps event ingestion platform integrating Jira, GitLab, Jenkins, JFrog, and ServiceNow with CI/CD observability and delivery analytics.",
+        subHeading: "Technologies Used: Kafka, Snowflake, Tableau, Power BI",
+    },
+    {
         title:"Personal Portfolio Website",
-        duration:{fromDate: "2021", toDate: "2022"},
-        description: "A Personal Portfolio website to showcase all my details and projects at one place.",
-        subHeading: "Technologies Used: React JS, Bootsrap",
+        duration:{fromDate: "2024", toDate: "2024"},
+        description: "Developed a personal portfolio website to showcase professional background, skills, and projects in a centralized platform with responsive design.",
+        subHeading: "Technologies Used: React, Bootstrap, Node.js, Express",
     },
     {
-        title:"FoodNation Website",
-        duration:{fromDate: "2021", toDate: "2021"}, 
-        description: " This project connects the restaurant, charity organization, and people. Instead of throwing unsold food away, restaurant can donate the food to charity o rganization. Restaurant can gain good public relation by donating food. ",
-        subHeading: "Technologies Used: React.js, Material UI and Firebase",
-    },
-    {
-        title:"Photo-Share App",
-        duration:{fromDate: "2020", toDate: "2021"},
-        description: "A social media application such as instagram where people can share their pictures, give comments, like on it etc.",
-        subHeading: "Technologies Used: Django framework.",
+        title:"Food Nation Website",
+        duration:{fromDate: "2022", toDate: "2022"},
+        description: "Developed a web application to connect restaurants with charity organizations and individuals, enabling restaurants to donate unsold food instead of discarding it.",
+        subHeading: "Technologies Used: React.js, Material UI, Firebase",
     },
   ];
 
@@ -95,7 +102,7 @@ const Resume = (props) => {
               />
               <ResumeHeading
              heading={"High School "}
-            subHeading={"School For Claasic High School"}
+            subHeading={"School For Classic High School"}
             fromDate={"2014"}
             toDate={"2017"}
       />
@@ -105,46 +112,51 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
       <ResumeHeading
-                 heading = {"IvyScope"}
-                 subHeading = {"Web developer"}
-                 fromDate = {"2021"}
-                 toDate = {"2021"}
+                 heading = {"Accenture, NY"}
+                 subHeading = {"Custom Software Engineering Analyst (Fulltime)"}
+                 fromDate = {"Jun 2024"}
+                 toDate = {"Present"}
             />
             <div className="experience-description">
                 <span className="resume-description-text">
-                Worked with frontend and Backend teams.
+                Led multiple Agile teams in delivering high-quality software products through Scrum practices.
                 </span>
             </div>
             <div className="experience-description">
                 <span className="resume-description-text">
-                 - Web development life cycle from start to finish, debug, and add new features in a timely manner,
-                  Implement UI designer's wireframes.
+                 - Facilitated all Scrum ceremonies including daily stand-ups, sprint planning, backlog grooming, sprint reviews, and retrospectives.
                 </span>
                 <br />
                 <span className="resume-description-text">
-                - Designed the database, Wrote HTML, CSS from the Figma design file, developed front-end React code with clean 
-                    architecture.{" "}
+                - Collaborated closely with Product Owners to maintain and prioritize product backlogs for clear and actionable user stories.
                 </span>
                 <br />
-    
+                <span className="resume-description-text">
+                - Promoted Agile best practices across teams and mentored junior Scrum Masters in Agile methodologies.
+                </span>
+                <br />
             </div>
+            
             <ResumeHeading
-                 heading = {"Research Foundation Cuny"}
-                 subHeading = {"Tech Support Intern"}
-                 fromDate = {"2020"}
-                 toDate = {"2021"}
+                 heading = {"L3Harris Technologies, Florida"}
+                 subHeading = {"Application Development (Full-time)"}
+                 fromDate = {"Jun 2022"}
+                 toDate = {"Jun 2024"}
             />
             <div className="experience-description">
                 <span className="resume-description-text">
-                -Setting up new computer equipment in classrooms and offices Installing software.
+                Design, develop and tests HTML, CSS, Bootstrap, JavaScript and React.JS for websites.
                 </span>
             </div>
             <div className="experience-description">
                 <span className="resume-description-text">
-                 - Troubleshooting hardware and software problems in conjunction with DOE Help Center and borough technology staff. {""}Configuring wireless devices to access DOE network.
+                 - Architected and developed large scale JavaScript applications with React.JS and developed user interface using React.JS, Flux for SPA development.
                 </span>
                 <br />
-                 
+                <span className="resume-description-text">
+                - Worked on databases in MongoDB and SQL with experience in Git for branching, tagging, and merging.
+                </span>
+                <br />
             </div>
       </div>
     </div>,
@@ -163,6 +175,7 @@ const Resume = (props) => {
               style={{ width: skill.ratingPercentage + "%" }}
               className="active-percentage-bar"
             ></div>
+            <span className="percentage-text">{skill.ratingPercentage}%</span>
           </div>
         </div>
       ))}
@@ -201,7 +214,7 @@ const Resume = (props) => {
   ];
 
   const handleCarousal = (index) => {
-    let offsetHeight = 360;
+    let offsetHeight = window.innerWidth <= 1023 ? 700 : 550;
 
     let newCarousalOffset = {
       style: { transform: "translateY(" + index * offsetHeight * -1 + "px)" },
@@ -249,7 +262,7 @@ const Resume = (props) => {
   }, [fadeInSubscription]);
 
 return (
-        <div className='= resume-container screen-container fade-in' id ={props.id || ""}>
+        <div className='resume-container screen-container' id ={props.id || ""}>
             <div className='resume-content'>
                 <ScreenHeading title = {'Resume'} subHeading = {'My formal Bio Details'}/>
                 <div className='resume-card'>

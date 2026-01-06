@@ -11,24 +11,23 @@ router.post('/contact', (req, res) =>{
             service: 'Gmail',
             port:465,
             auth:{
-                user:'hossn75@gmail.com',
-                pass:'---------'
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
             }
         })
         let mailOptions = {
-            from:data.email,
-            to:'hossn75@gmail.com',
-            subject:`Message from ${data.name}`, 
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER,
+            replyTo: data.email,
+            subject:`Portfolio Contact: ${data.name}`, 
             html:`
-            <h3>Information</h3>
+            <h3>New Contact Form Submission</h3>
             <ul> 
-            <li>Name:${data.name}</li>
-            <li>Email:${data.email}</li>
-
+            <li><strong>Name:</strong> ${data.name}</li>
+            <li><strong>Email:</strong> ${data.email}</li>
             </ul>
             <h3>Message</h3>
-            <p>${data.message}</p3>
-
+            <p>${data.message}</p>
             `
         }
 

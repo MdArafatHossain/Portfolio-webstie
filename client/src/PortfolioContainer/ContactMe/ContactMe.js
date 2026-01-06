@@ -66,7 +66,7 @@ const ContactMe = (props) => {
       };
 
   return (
-    <div className='main-container fade-in' id = {props.id || ''} >
+    <div className='main-container screen-container' id = {props.id || ''} >
         <ScreenHeading 
         title ={"Contact Me"}
         subHeading = {"Lets Keep In Touch"}
@@ -80,9 +80,9 @@ const ContactMe = (props) => {
                 loop = {Infinity}
                 steps = {[
                     "Get In Touch 📧 ",
-                    1200, 
+                    4000, 
                     "Email Me Anytime 📧 ",
-                    1200, 
+                    4000, 
                    
                 ]}
                 />

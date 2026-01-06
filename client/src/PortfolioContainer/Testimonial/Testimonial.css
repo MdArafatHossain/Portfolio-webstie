@@ -1,71 +1,72 @@
 .testimonial-section{
-    padding: 80px;
-    background-image: url("../../../src/assets/Testimonial/bg-1.jpg");
-    background-position: center;
-    background-attachment: fixed;
+    padding: 0;
+    background: transparent;
     position: relative;
-    z-index:-1;
-}
-.testimonial-section::before{
-    content:"";
-    position: absolute;
-    left:0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index:-1;
-    opacity: 0.85;
-    background-color: #1f2235;
+    z-index: 1;
 }
 
-.footer-image{
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
-    overflow: hidden;
+.testimonial-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-section .testi-item{
+    background: transparent;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 
+        20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+    position: relative;
+    overflow: visible;
+    transition: all 0.4s ease;
+    min-height: 500px;
     display: flex;
-    justify-content: center;
-    margin-top: -110px;
+    flex-direction: column;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-image img{
-    max-width: 100%;
-    height: 130px;
-}
-.testimonial-section .testi-item{
-    background-color: aliceblue;
-    padding: 30px;
-    border-radius:  50px 50px 50px 0px;
+.testimonial-section .testi-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        25px 25px 70px #bebebe,
+        -25px -25px 70px #ffffff;
 }
 
-.testimonial-section .testi-item{
+.testimonial-section .testi-item p{
     font-size: 16px;
-    line-height: 26px;
-    font-weight: bold;
-    margin: 0 0 10px;
+    line-height: 28px;
+    font-weight: 500;
+    margin: 0 0 20px;
     font-style: italic;
-    font-family:serif;
+    font-family: 'Poppins', serif;
+    color: #2d3748;
 }
-.testimonial-section .testi-item p  .fa-quote-left{
-    margin-right: 6px;
-    color: red;
+
+.testimonial-section .testi-item p .fa-quote-left{
+    margin-right: 8px;
+    color: #667eea;
+    font-size: 18px;
 }
-.testimonial-section .testi-item p  .fa-quote-right{
-    margin-left: 5px;
-    color: red;
+
+.testimonial-section .testi-item p .fa-quote-right{
+    margin-left: 8px;
+    color: #764ba2;
+    font-size: 18px;
 }
 
 .testimonial-section .testi-comment .stars li{
     display: inline-block;
+}
 
-}
 .testimonial-section .testi-comment .stars{
-    margin: 0 0 20px;
-    color: rgb(12, 14, 163);
+    margin: 0 0 25px;
+    color: #667eea;
 }
+
 .testimonial-section .testi-comment .stars li i{
     font-size: 16px;
-    
 }
 
 .testimonial-section .client-info{
@@ -73,52 +74,60 @@
     padding-left: 8px;
     padding-top: 5px;
     min-height: 60px;
-
 }
+
 .testimonial-section .client-info img{
-    height: 200px;
-    width: 200px;
-    border: 2px solid transparent;
-    border-color: black;
-    left: 0;
-    top: 0;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
-    position: relative;
+    box-shadow: 
+        10px 10px 30px #bebebe,
+        -10px -10px 30px #ffffff;
+    transition: all 0.3s ease;
+}
 
+.testimonial-section .client-info img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        15px 15px 40px #bebebe,
+        -15px -15px 40px #ffffff;
 }
+
 .testimonial-section .client-info h5{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 26px;
-    margin: 0 0 2px;
+    line-height: 28px;
+    margin: 15px 0 5px;
+    color: #2d3748;
 }
+
 .testimonial-section .client-info p{
-    font-size: 16px;
-    line-height: 26px;
-    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
     margin: 0;
+    color: #4a5568;
 }
+
+.footer-image{
+    display: none;
+}
+
 @media only screen and (max-width: 898px){
-    
     .testimonial-section .client-info img{
         height: 80px;
         width: 80px;
     }
     .testimonial-section{
-        height: 100px;
-        padding: 80px;
+        padding: 60px 20px;
+    }
+    .testimonial-section .testi-item{
+        min-height: 400px;
     }
 }
+
 @media only screen and (max-width: 1110px) {
     .testimonial-section{
         width: 100%;
-        height: 100%;
     }
 }
-
-
-
-
-
-
-

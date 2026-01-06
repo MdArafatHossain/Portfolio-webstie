@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const contactRoute = require("../PORTFOLIOPRO/route/contactRoute");
+const contactRoute = require("./route/contactRoute");
 
 const app = express();
 
@@ -19,4 +19,4 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const port = process.env.PORT || 5000;
-app.listen(port, console.log(`server listing to port 5000 only`));
+app.listen(port, () => console.log(`Server listening on port ${port}`));
