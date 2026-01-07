@@ -35,10 +35,16 @@ const ContactMe = (props) => {
       const handleMessage = (e) => {
         setMessage(e.target.value);
       };
-       console.log(name);
 
        const submitForm = async (e) => {
         e.preventDefault();
+        
+        if (name.length === 0 || email.length === 0 || message.length === 0) {
+          setBanner("Please fill all the fields");
+          toast.error("Please fill all the fields");
+          return;
+        }
+        
         try {
           let data = {
             name,
@@ -47,11 +53,7 @@ const ContactMe = (props) => {
           };
           setBool(true);
           const res = await axios.post('/api/contact', data);
-          if (name.length === 0 || email.length === 0 || message.length === 0) {
-            setBanner(res.data.msg);
-            toast.error(res.data.msg);
-            setBool(false);
-          } else if (res.status === 200) {
+          if (res.status === 200) {
             setBanner(res.data.msg);
             toast.success(res.data.msg);
             setBool(false);
